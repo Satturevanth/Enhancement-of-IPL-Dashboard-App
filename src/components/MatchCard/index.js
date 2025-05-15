@@ -1,14 +1,13 @@
 // Write your code here
-import {Component} from 'react'
-
-// Write your code here
 import './index.css'
 
 const MatchCard = props => {
   const {matchDetails} = props
   const {competingTeamLogo, competingTeam, matchStatus, result} = matchDetails
+
   const getMatchStatusClassName = status =>
     status === 'Won' ? 'match-won' : 'match-lost'
+
   const matchStatusClassName = `match-status ${getMatchStatusClassName(
     matchStatus,
   )}`
